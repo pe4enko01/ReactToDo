@@ -3,10 +3,15 @@ import AppHeader from '../app-header/app-header';
 import SearchPanel from '../serh-panel/serh-panel';
 import PostStatusFilter from '../post-status-filter/post-status-filter';
 import PostList from '../post-list/post-list';
-import PostAddForm from '../post-add-form/post-add-form'
+import PostAddForm from '../post-add-form/post-add-form';
 
+import './app.css';
 
 const App = () =>{
+
+    const data = [
+        {label:"Reactt", important: false, id:"fdf"}
+    ];
     return(
         <div className = "app">
             <AppHeader/>
@@ -14,11 +19,11 @@ const App = () =>{
                 <SearchPanel/>
                 <PostStatusFilter/>
             </div>
-            <PostList/>
+            <PostList posts = {data}/>
             <PostAddForm/>
         </div>
         );
-}
+};
 
 export default App;
 
